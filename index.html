@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Почтовая форма</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+
+<body>
+  <header>
+    <H3>ОФОРМЛЕНИЕ ПОЧТОВОГО ОТПРАВЛЕНИЯ</H3>
+  </header>
+  <div class="row">
+    <div class="col">
+
+    </div>
+    <div class="col-10">
+      <div class="background">
+
+
+
+        <section class="form">
+
+          <form action="" method="post">
+
+            <div class="container">
+
+              <!-- Отправитель -->
+
+              <div class="row">
+                <div class="col">
+                  <div class="sender">
+                  <label for="name_sender">От кого:</label>
+                  <br>
+                  <input type="text" class="form-post-nm" name="name_sender" id="name_sender"
+                    placeholder="Введите ФИО отправителя"><br>
+                  <label for="address_sender">Адресс:</label><br>
+                  <input type="text" class="form-post-cnt" name="country" id="country" placeholder="Страна">
+                  <input type="text" class="form-post-ct" name="city" id="city" placeholder="Город">
+                  <input type="text" class="form-post-str" name="street" id="street"
+                    placeholder="Улица, дом, корпус, квартира">
+                  </div>
+                  <br>
+                </div>
+               <div class="col">
+                  <!-- Пустая ячейка -->
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <!-- Пустая ячейка -->
+                </div>
+                <div class="col">
+
+                  <!-- ячейка вывода QR кода-->
+
+                </div>
+                <div class="col">
+                  <!-- Пустая ячейка -->
+
+                </div>
+              </div>
+
+              <!-- Получатель -->
+
+              <div class="row">
+                
+                <div class="col">
+
+                  <!-- Пустая ячейка -->
+
+                </div>
+                <div class="col">
+                  <div class="reco">
+                  <label for="name_rec">Кому:</label>
+                  <br>
+                  <input type="text" class="form-post-nm" name="name_rec" id="name_rec"
+                    placeholder="Введите ФИО получателя">
+                  <br>
+                  <label for="address_rec">Куда:</label>
+                  <br>
+
+                  <input type="text" class="form-post-cnt" name="country_rec" id="country_rec" placeholder="Страна">
+                  <input type="text" class="form-post-ct" name="city_rec" id="city_rec" placeholder="Город">
+                  <input type="text" class="form-post-str" name="street_rec" id="street_rec"
+                    placeholder="Улица, дом, корпус, квартира">
+                  <input type="text" class="form-post-ph" name="phone_rec" id="phone_rec" placeholder="Телефон">
+                  <input type="text" class="form-post-ix" name="index" id="index" placeholder="Индекс">
+                </div>
+
+
+
+                </div>
+              </div>
+
+            </div>
+
+          </form>
+
+        </section>
+      </div>
+    </div>
+    <div class="col">
+
+  </div>
+</div>
+
+
+<div class="button">
+<button name="btn btn_print" type="submit">Печать</button>
+</div>
+
+</body>
+
+</html>
