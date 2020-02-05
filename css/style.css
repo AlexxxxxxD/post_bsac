@@ -2,90 +2,114 @@ header {
   text-align: center;
   padding: 30px;
 }
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  font-size: 23px
+}
+
+/*Адреса и ФИО начало*/
 .form-post-nm {
   border-radius: 1px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  height: 24px;
-  width: 190px;
-  font-size: 11px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  height: 30px;
+  width: 390px;
+  font-size: 19px;
   margin: 3px;
+  text-align: center;
 }
 
 .form-post-cnt {
   border-radius: 1px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  height: 24px;
-  width: 90px;
-  font-size: 11px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  height: 25px;
+  width: 190px;;
+  font-size: 19px;
   margin: 3px;
+  text-align: center;
+
 }
 
 .form-post-ct {
   border-radius: 1px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  height: 24px;
-  width: 90px;
-  font-size: 11px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  height: 25px;
+  width: 190px;
+  font-size: 19px;
   margin: 3px;
+  text-align: center;
+
 }
 
 .form-post-str {
   border-radius: 1px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  height: 24px;
-  width: 190px;
-  font-size: 11px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  height: 25px;
+  width: 390px;
+  font-size: 19px;
   margin: 3px;
+  text-align: center;
+
 }
 
 .form-post-ph {
   border-radius: 1px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  height: 24px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  height: 25px;
   width: 190px;
-  font-size: 11px;
+  font-size: 19px;
   margin: 3px;
+  text-align: center;
+
 }
 
 .form-post-ix {
   border-radius: 1px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  height: 24px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  height: 25px;
   width: 190px;
-  font-size: 11px;
+  font-size: 19px;
   margin: 3px;
+  text-align: center;
+
 }
+/*Адреса и ФИО конец*/
+
 .form {
   padding-top: 15px;
 }
+
 section {
   /*  */
 }
+
 .background {
   width: 100%;
-  height: 100%;
+  height: 120%;
   background: url(../img/conf.png);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
   padding: 21px;
-  
 }
+
 div.col {
   padding-bottom: 50px;
 }
+
 div.sender {
   margin-left: 131px;
   margin-top: 25px;
@@ -95,6 +119,12 @@ div.reco {
   margin-left: 33px;
   margin-bottom: 20px;
 }
+
 .button {
   text-align: center;
+}
+
+#qr {
+  left: 10%;
+  transform: translate(-0%, -5%);
 }

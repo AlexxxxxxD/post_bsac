@@ -6,9 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Почтовая форма</title>
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"> </script>
+  <script type="text/javascript" src="js/qrcode.min.js"> </script>
+  <script src="js/common.js"> </script>
+  <!-- <script class="ig" src="js/html2canvas.min.js"> </script> -->
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
+
 </head>
 
 
@@ -20,7 +27,9 @@
     <div class="col">
 
     </div>
-    <div class="col-10">
+    <!-- id="mydiv"  - для печати через кнопку -->
+    <!-- id="capture"   - для конвертации div'а в картинку -->
+    <div class="col-11">
       <div class="background">
 
 
@@ -36,63 +45,41 @@
               <div class="row">
                 <div class="col">
                   <div class="sender">
-                  <label for="name_sender">От кого:</label>
-                  <br>
-                  <input type="text" class="form-post-nm" name="name_sender" id="name_sender"
-                    placeholder="Введите ФИО отправителя"><br>
-                  <label for="address_sender">Адресс:</label><br>
-                  <input type="text" class="form-post-cnt" name="country" id="country" placeholder="Страна">
-                  <input type="text" class="form-post-ct" name="city" id="city" placeholder="Город">
-                  <input type="text" class="form-post-str" name="street" id="street"
-                    placeholder="Улица, дом, корпус, квартира">
+                    <label for="name_sender">От кого:</label>
+                    <br>
+                    <input type="text" class="form-post-nm" name="name_sender" id="name_sender" placeholder="Введите ФИО отправителя"><br>
+                    <label for="address_sender">Адресс:</label><br>
+                    <input type="text" class="form-post-cnt" name="country" id="country" placeholder="Страна">
+                    <input type="text" class="form-post-ct" name="city" id="city" placeholder="Город"><br>
+                    <input type="text" class="form-post-str" name="street" id="street" placeholder="Улица, дом, корпус, квартира">
                   </div>
                   <br>
                 </div>
-               <div class="col">
-                  <!-- Пустая ячейка -->
-                </div>
-              </div>
-              <div class="row">
                 <div class="col">
                   <!-- Пустая ячейка -->
-                </div>
-                <div class="col">
-
-                  <!-- ячейка вывода QR кода-->
-
-                </div>
-                <div class="col">
-                  <!-- Пустая ячейка -->
-
                 </div>
               </div>
 
               <!-- Получатель -->
 
               <div class="row">
-                
-                <div class="col">
 
-                  <!-- Пустая ячейка -->
-
-                </div>
+                <div id="qr" class="col"></div>
                 <div class="col">
                   <div class="reco">
-                  <label for="name_rec">Кому:</label>
-                  <br>
-                  <input type="text" class="form-post-nm" name="name_rec" id="name_rec"
-                    placeholder="Введите ФИО получателя">
-                  <br>
-                  <label for="address_rec">Куда:</label>
-                  <br>
+                    <label for="name_rec">Кому:</label>
+                    <br>
+                    <input type="text" class="form-post-nm" name="name_rec" id="name_rec" placeholder="Введите ФИО получателя">
+                    <br>
+                    <label for="address_rec">Куда:</label>
+                    <br>
 
-                  <input type="text" class="form-post-cnt" name="country_rec" id="country_rec" placeholder="Страна">
-                  <input type="text" class="form-post-ct" name="city_rec" id="city_rec" placeholder="Город">
-                  <input type="text" class="form-post-str" name="street_rec" id="street_rec"
-                    placeholder="Улица, дом, корпус, квартира">
-                  <input type="text" class="form-post-ph" name="phone_rec" id="phone_rec" placeholder="Телефон">
-                  <input type="text" class="form-post-ix" name="index" id="index" placeholder="Индекс">
-                </div>
+                    <input type="text" class="form-post-cnt" name="country_rec" id="country_rec" placeholder="Страна">
+                    <input type="text" class="form-post-ct" name="city_rec" id="city_rec" placeholder="Город"><br>
+                    <input type="text" class="form-post-str" name="street_rec" id="street_rec" placeholder="Улица, дом, корпус, квартира"><br>
+                    <input type="text" class="form-post-ph" name="phone_rec" id="phone_rec" placeholder="Телефон">
+                    <input type="text" class="form-post-ix" name="index" id="index" placeholder="Индекс">
+                  </div>
 
 
 
@@ -108,14 +95,48 @@
     </div>
     <div class="col">
 
+    </div>
   </div>
-</div>
+  <!-- <a href="#" onclick="window.print()">Распечатать</a> -->
 
 
-<div class="button">
-<button name="btn btn_print" type="submit">Печать</button>
-</div>
+
+
+  <!--  <div>
+  <input type="button" value="Print Div" onclick="PrintElem('#mydiv')" /> -->
+  </div>
 
 </body>
+
+<!--
+
+<script type="text/javascript">
+  function PrintElem(elem) {
+    Popup($(elem).html());
+  }
+
+  function Popup(data) {
+    var mywindow = window.open('', 'my div', 'height=400,width=600');
+    mywindow.document.write('<html><head><title>my div</title>');
+    mywindow.document.write('</head><body >');
+    mywindow.document.write(data);
+    mywindow.document.write('</body></html>');
+    mywindow.document.close(); // necessary for IE >= 10
+    mywindow.focus(); // necessary for IE >= 10
+    mywindow.print();
+    mywindow.close();
+    return true;
+  }
+</script>
+
+<script class="ig">
+  html2canvas(document.querySelector("#capture")).then(canvas => {
+    document.body.appendChild(canvas)
+  });
+</script>
+
+ -->
+
+
 
 </html>
